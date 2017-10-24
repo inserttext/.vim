@@ -22,4 +22,3 @@
 [submodule "bundle/neovim-colors-solarized-truecolor-only"]
 	path = bundle/neovim-colors-solarized-truecolor-only
 	url = https://github.com/frankier/neovim-colors-solarized-truecolor-only.git
-	branch = master
