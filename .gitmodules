@@ -19,6 +19,7 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/neovim-colors-solarized-truecolor-only"]
+	path = bundle/neovim-colors-solarized-truecolor-only
+	url = https://github.com/frankier/neovim-colors-solarized-truecolor-only.git
+	branch = master
