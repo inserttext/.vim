@@ -221,7 +221,7 @@ map <leader>pp :setlocal paste!<cr>
 inoremap $1 ()<esc>i
 inoremap $2 []<esc>i
 inoremap $3 {}<esc>i
-inoremap $$ {<esc>o}<esc>O
+inoremap $4 {<esc>o}<esc>O
 inoremap $q ''<esc>i
 inoremap $e ""<esc>i
 
