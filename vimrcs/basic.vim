@@ -91,8 +91,11 @@ syntax enable
 set termguicolors
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
-colorscheme solarized
+colorscheme solarized8_dark
 set background=dark
+
+" Set indent indicator color
+hi SpecialKey guifg=#073642 guibg=#002b36
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -119,6 +122,9 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+
+" Show indent level
+set list listchars=tab:\│\ ,
 
 set ai "Auto indent
 set si "Smart indent
