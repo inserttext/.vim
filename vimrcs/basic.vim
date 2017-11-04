@@ -9,6 +9,11 @@
 " Enables pathogen plugin manager
 execute pathogen#infect()
 
+" Load matchit.vim
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+	runtime macros/matchit.vim
+endif
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
