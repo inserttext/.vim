@@ -23,23 +23,15 @@ let g:mapleader = ","
 " <C-c> returns to normal mode
 map <C-c> <esc>
 
+" I am a millenial
+set nocompatible
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM User Interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor for vertical movement
-set so=7
-
-" Turn on the WiLd menu
-set wildmenu
-
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
-	set wildignore+=.git\*,.hg\*,.svn\*
-else
-	set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-endif
+set scrolloff=7
 
 " Show line numbers
 set number
@@ -47,18 +39,6 @@ set number
 " Configure backspace so it acts as it should
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-
-" Ignore case when searching
-set ignorecase
-
-" When searching try to be smart about cases
-set	smartcase
-
-" Highlight search results
-set hlsearch
-
-" Make search act like modern browser search
-set incsearch
 
 " Don't redraw while executing macros
 set lazyredraw
@@ -69,16 +49,16 @@ set magic
 " Show matching brackets when cursor is over them
 set showmatch
 " How many tenths of a second to blink when matching brackets
-set mat=2
+set matchtime=2
 
 " No sound on errors
 set noerrorbells
 set novisualbell
 set t_vb=
-set tm=500
+set timeoutlen=500
 
 " Automatically change working directory to file
-set autochdir
+" set autochdir
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -95,13 +75,13 @@ colorscheme solarized8_dark
 set background=dark
 
 " Set indent indicator color
-hi SpecialKey guifg=#073642 guibg=#002b36
+hi SpecialKey guibg=#002b36
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
 " Use Unix as the standard file type
-set ffs=unix,dos,mac
+set fileformats=unix,dos,mac
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,30 +89,12 @@ set ffs=unix,dos,mac
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn off backups
 set nobackup
-set nowb
+set nowritebackup
 set noswapfile
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, Tab, and Indent
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Smart tabbing
-set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-
-" Show indent level
-set list listchars=tab:\│\ ,
-
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap text
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Netrw
+" => File Browsing
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle Vexplore with <leader>nn
 function! ToggleVExplorer()
@@ -169,33 +131,52 @@ let g:netrw_winsize = 25
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving Around, Tabs, Windows, and Buffers
+" => Searching
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Map <space> to / and <c-space> to ?
-map <space> /
-map <c-space> ?
+" Turn on the WiLd menu
+set wildmenu
 
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+	set wildignore+=.git\*,.hg\*,.svn\*
+else
+	set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
 
-" Better window switching
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+" Ignore case when searching
+set ignorecase
 
-" Return to last edit position when opening files
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+" When searching try to be smart about cases
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Make search act like modern browser search
+set incsearch
+
+" Search subfolders
+set path+=**
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Status Line
+" => Text, Tab, and Indent
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
+" Smart tabbing
+set smarttab
 
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Show indent level
+" set list listchars=tab:\│\ ,
+
+set autoindent "Auto indent
+set smartindent "Smart indent
+set wrap "Wrap text
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing
@@ -233,7 +214,37 @@ inoremap $e ""<esc>i
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" +> Helper Functions
+" => Moving Around, Tabs, Windows, and Buffers
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Map <space> to / and <c-space> to ?
+map <space> /
+map <c-space> ?
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" Better window switching
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Return to last edit position when opening files
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Status Line
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Always show the status line
+set laststatus=2
+
+" Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Helper Functions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Returns true if pasete mode is enabled
 function! HasPaste()
