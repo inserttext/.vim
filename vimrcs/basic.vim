@@ -23,6 +23,9 @@ let g:mapleader = ","
 " <C-c> returns to normal mode
 map <C-c> <esc>
 
+" Reduce time for swap updates from 4seconds to .25 seconds
+set updatetime=250
+
 " I am a millenial
 set nocompatible
 
