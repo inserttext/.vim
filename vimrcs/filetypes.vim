@@ -2,4 +2,4 @@
 " => C
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set folding style to syntax
-au FileType c set fdm=syntax
+" au FileType c set fdm=syntax
