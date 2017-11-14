@@ -83,7 +83,7 @@ colorscheme solarized8_dark
 set background=dark
 
 " Set indent indicator color
-hi SpecialKey guibg=#002b36
+" hi SpecialKey guibg=#002b36
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
