@@ -6,6 +6,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remove system settings
+set nocompatible
+
 " Enables pathogen plugin manager
 execute pathogen#infect()
 
@@ -30,9 +33,6 @@ map <C-c> <esc>
 
 " Reduce time for swap updates from 4seconds to .25 seconds
 set updatetime=250
-
-" I am a millenial
-set nocompatible
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
