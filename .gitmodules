@@ -25,3 +25,6 @@
 [submodule "bundle/vim-sandwich"]
 	path = bundle/vim-sandwich
 	url = https://github.com/machakann/vim-sandwich.git
+[submodule "bundle/vim-minisnip"]
+	path = bundle/vim-minisnip
+	url = https://github.com/KeyboardFire/vim-minisnip.git
