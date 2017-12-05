@@ -28,9 +28,6 @@ filetype indent on
 let mapleader = ","
 let g:mapleader = ","
 
-" <C-c> returns to normal mode
-" map <C-c> <esc>
-
 " Set time for swap updates
 set updatetime=250
 
@@ -56,7 +53,6 @@ set magic
 
 " Show matching brackets when cursor is over them
 set showmatch
-" How many tenths of a second to blink when matching brackets
 set matchtime=2
 
 " No sound on errors
@@ -64,9 +60,6 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set timeoutlen=500
-
-" Automatically change working directory to file
-" set autochdir
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -81,9 +74,6 @@ set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
 colorscheme jellybeans
 set background=dark
-
-" Set indent indicator color
-" hi SpecialKey guibg=#002b36
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -198,10 +188,6 @@ inoremap $6 ""<esc>i
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving Around, Tabs, Windows, and Buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Map <space> to / and <c-space> to ?
-" map <space> /
-" map <c-space> ?
-
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :nohighlight<CR>
 
