@@ -10,9 +10,6 @@
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "bundle/vim-solarized8"]
-	path = bundle/vim-solarized8
-	url = https://github.com/lifepillar/vim-solarized8.git
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
