@@ -29,9 +29,9 @@ let mapleader = ","
 let g:mapleader = ","
 
 " <C-c> returns to normal mode
-map <C-c> <esc>
+" map <C-c> <esc>
 
-" Reduce time for swap updates from 4seconds to .25 seconds
+" Set time for swap updates
 set updatetime=250
 
 
@@ -105,24 +105,6 @@ set noswapfile
 " => File Browsing
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle Vexplore with <leader>nn
-function! ToggleVExplorer()
-	if exists("t:expl_buf_num")
-		let expl_win_num = bufwinnr(t:expl_buf_num)
-		if expl_win_num != -1
-			let cur_win_nr = winnr()
-			exec expl_win_num . 'wincmd w'
-			close
-			exec cur_win_nr . 'wincmd w'
-			unlet t:expl_buf_num
-		else
-			unlet t:expl_buf_num
-		endif
-	else
-		exec '1wincmd w'
-		Vexplore
-		let t:expl_buf_num = bufnr("%")
-	endif
-endfunction
 map <silent> <leader>nn :call ToggleVExplorer()<CR>
 
 " Remove banner
@@ -197,14 +179,6 @@ catch
 endtry
 
 " Delete trailing white space on save
-fun! CleanExtraSpaces()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	silent! %s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
-endfun
-
 if has("autocmd")
 	autocmd BufWritePre *.c,*.cpp,*.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
@@ -225,11 +199,11 @@ inoremap $6 ""<esc>i
 " => Moving Around, Tabs, Windows, and Buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <space> to / and <c-space> to ?
-map <space> /
-map <c-space> ?
+" map <space> /
+" map <c-space> ?
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+map <silent> <leader><cr> :nohighlight<CR>
 
 " Better window switching
 map <C-j> <C-W>j
@@ -254,10 +228,39 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper Functions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Returns true if pasete mode is enabled
+" Returns true if paste mode is enabled
 function! HasPaste()
     if &paste
         return 'PASTE MODE  '
     endif
     return ''
+endfunction
+
+" Delete trailing white space on save
+function! CleanExtraSpaces()
+	let save_cursor = getpos(".")
+	let old_query = getreg('/')
+	silent! %s/\s\+$//e
+	call setpos('.', save_cursor)
+	call setreg('/', old_query)
+endfun
+
+" Toggles the file tree
+function! ToggleVExplorer()
+	if exists("t:expl_buf_num")
+		let expl_win_num = bufwinnr(t:expl_buf_num)
+		if expl_win_num != -1
+			let cur_win_nr = winnr()
+			exec expl_win_num . 'wincmd w'
+			close
+			exec cur_win_nr . 'wincmd w'
+			unlet t:expl_buf_num
+		else
+			unlet t:expl_buf_num
+		endif
+	else
+		exec '1wincmd w'
+		Vexplore
+		let t:expl_buf_num = bufnr("%")
+	endif
 endfunction
