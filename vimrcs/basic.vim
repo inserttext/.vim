@@ -40,6 +40,7 @@ set scrolloff=7
 
 " Show line numbers
 set number
+nnoremap <silent> <leader>r :call CycleNumbering()<CR>
 
 " Configure backspace so it acts as it should
 set backspace=eol,start,indent
@@ -249,4 +250,18 @@ function! ToggleVExplorer()
 		Vexplore
 		let t:expl_buf_num = bufnr("%")
 	endif
+endfunction
+
+" Cycle through relativenumber + number, number (only), and no numbering.
+function! CycleNumbering() abort
+  if exists('+relativenumber')
+    execute {
+          \ '10': 'set relativenumber   | set number',
+          \ '01': 'set norelativenumber | set number',
+          \ '11': 'set norelativenumber | set nonumber',
+          \ '00': 'set norelativenumber | set number' }[&number . &relativenumber]
+  else
+    " No relative numbering, just toggle numbers on and off.
+    set number!<CR>
+  endif
 endfunction
