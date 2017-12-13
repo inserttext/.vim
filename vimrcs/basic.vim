@@ -190,7 +190,7 @@ inoremap $6 ""<esc>i
 " => Moving Around, Tabs, Windows, and Buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :nohighlight<CR>
+map <silent> <leader><cr> :noh<CR>
 
 " Better window switching
 map <C-j> <C-W>j
