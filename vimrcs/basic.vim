@@ -25,8 +25,8 @@ filetype plugin on
 filetype indent on
 
 " Map leader for extra functions
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = " "
+let g:mapleader = " "
 
 " Set time for swap updates
 set updatetime=250
@@ -197,6 +197,12 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Better tab management
+nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>tc :tabclose<CR>
+nnoremap <leader>n :tabnext<CR>
+nnoremap <leader>p :tabprevious<CR>
 
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
