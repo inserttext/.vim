@@ -1,30 +1,30 @@
-[submodule "bundle/lightline.vim"]
-	path = bundle/lightline.vim
+[submodule "pack/plugins/start/lightline.vim"]
+	path = pack/plugins/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
+[submodule "pack/plugins/start/syntastic"]
+	path = pack/plugins/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "bundle/vim-commentary"]
-	path = bundle/vim-commentary
+[submodule "pack/plugins/start/vim-commentary"]
+	path = pack/plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "bundle/vim-repeat"]
-	path = bundle/vim-repeat
+[submodule "pack/plugins/start/vim-repeat"]
+	path = pack/plugins/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
+[submodule "pack/plugins/start/vim-gitgutter"]
+	path = pack/plugins/start/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
-[submodule "bundle/tabular"]
-	path = bundle/tabular
+[submodule "pack/plugins/start/tabular"]
+	path = pack/plugins/start/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/jellybeans.vim"]
-	path = bundle/jellybeans.vim
+[submodule "pack/plugins/start/jellybeans.vim"]
+	path = pack/plugins/start/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
-[submodule "bundle/vim-minisnip"]
-	path = bundle/vim-minisnip
+[submodule "pack/plugins/start/vim-minisnip"]
+	path = pack/plugins/start/vim-minisnip
 	url = https://github.com/KeyboardFire/vim-minisnip.git
-[submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
+[submodule "pack/plugins/start/vim-surround"]
+	path = pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-ragtag"]
-	path = bundle/vim-ragtag
+[submodule "pack/plugins/start/vim-ragtag"]
+	path = pack/plugins/start/vim-ragtag
 	url = https://github.com/tpope/vim-ragtag.git
