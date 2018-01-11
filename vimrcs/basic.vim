@@ -201,8 +201,8 @@ map <C-l> <C-W>l
 " Better tab management
 nnoremap <leader>tn :tabnew<CR>
 nnoremap <leader>tc :tabclose<CR>
-nnoremap <leader>n :tabnext<CR>
-nnoremap <leader>p :tabprevious<CR>
+nnoremap <leader>[ :tabprevious<CR>
+nnoremap <leader>] :tabnext<CR>
 
 " Quick find file
 nnoremap <leader>f :find 
