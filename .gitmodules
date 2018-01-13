@@ -25,3 +25,6 @@
 [submodule "pack/plugins/start/vim-ragtag"]
 	path = pack/plugins/start/vim-ragtag
 	url = https://github.com/tpope/vim-ragtag.git
+[submodule "pack/plugins/start/YouCompleteMe"]
+	path = pack/plugins/start/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
