@@ -25,3 +25,6 @@
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "pack/plugins/start/vim-gitgutter"]
+	path = pack/plugins/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
