@@ -13,9 +13,6 @@
 [submodule "pack/plugins/start/jellybeans.vim"]
 	path = pack/plugins/start/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
-[submodule "pack/plugins/start/vim-minisnip"]
-	path = pack/plugins/start/vim-minisnip
-	url = https://github.com/KeyboardFire/vim-minisnip.git
 [submodule "pack/plugins/start/vim-surround"]
 	path = pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
