@@ -70,7 +70,7 @@ syntax enable
 set termguicolors
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
-colorscheme base16-tomorrow-night
+colorscheme nord
 set background=dark
 
 " Set utf8 as standard encoding and en_US as the standard language
