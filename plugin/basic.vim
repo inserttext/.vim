@@ -212,8 +212,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " => Command Line
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shell-like command line mappings
-cnoremap <C-A> <home>
-
+cnoremap <C-a> <home>
+cnoremap <C-e> <end>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status Line
