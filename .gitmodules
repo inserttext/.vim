@@ -16,9 +16,6 @@
 [submodule "pack/plugins/start/vim-ragtag"]
 	path = pack/plugins/start/vim-ragtag
 	url = https://github.com/tpope/vim-ragtag.git
-[submodule "pack/plugins/start/YouCompleteMe"]
-	path = pack/plugins/start/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/w0rp/ale.git
@@ -37,3 +34,6 @@
 [submodule "pack/plugins/start/nord-vim"]
 	path = pack/plugins/start/nord-vim
 	url = https://github.com/arcticicestudio/nord-vim.git
+[submodule "pack/plugins/start/vim-tmux-navigator"]
+	path = pack/plugins/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git

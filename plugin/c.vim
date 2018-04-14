@@ -7,3 +7,6 @@ au FileType c match OverLength /\%81v.\+/
 
 " Set folding style to syntax
 " au FileType c set fdm=syntax
+
+" Remove tab expansion
+au FileType c set noexpandtab
