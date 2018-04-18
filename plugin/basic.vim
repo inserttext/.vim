@@ -70,8 +70,7 @@ syntax enable
 set termguicolors
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
-colorscheme base16-monokai
-set background=dark
+colorscheme base16-default-dark
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
