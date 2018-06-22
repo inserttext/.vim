@@ -171,7 +171,7 @@ endtry
 
 " Delete trailing white space on save
 if has("autocmd")
-	autocmd BufWritePre *.c,*.cpp,*.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+	autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,*.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
 
 " Toggle paste mode
@@ -240,7 +240,7 @@ function! CleanExtraSpaces()
 	silent! %s/\s\+$//e
 	call setpos('.', save_cursor)
 	call setreg('/', old_query)
-endfun
+endfunction
 
 " Toggles the file tree
 function! ToggleVExplorer()
