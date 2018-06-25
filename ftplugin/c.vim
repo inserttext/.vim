@@ -9,4 +9,4 @@ match OverLength /\%81v.\+/
 " au FileType c set fdm=syntax
 
 " Remove tab expansion
-set noexpandtab
+setlocal noexpandtab

@@ -83,6 +83,13 @@ set fileformats=unix,dos,mac
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, Backups, and Undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn on persistent undo
+try
+	set undodir=~/.vim/temp_dirs/undodir
+	set undofile
+catch
+endtry
+
 " Turn off backups
 set nobackup
 set nowritebackup
@@ -162,28 +169,16 @@ set wrap "Wrap text
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn on persistent undo
-try
-	set undodir=~/.vim/temp_dirs/undodir
-	set undofile
-catch
-endtry
-
 " Delete trailing white space on save
 if has("autocmd")
 	autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,*.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
 
 " Toggle paste mode
-map <leader>pp :setlocal paste!<cr>
+map <silent> <leader>pp :setlocal paste!<cr>
 
 " Parenthesis/bracket automake
-inoremap $1 ()<esc>i
-inoremap $2 []<esc>i
-inoremap $3 {}<esc>i
 inoremap $4 {<esc>o}<esc>O
-inoremap $5 ''<esc>i
-inoremap $6 ""<esc>i
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -199,10 +194,10 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Better tab management
-nnoremap <leader>tn :tabnew<CR>
-nnoremap <leader>tc :tabclose<CR>
-nnoremap <leader>[ :tabprevious<CR>
-nnoremap <leader>] :tabnext<CR>
+nnoremap <silent> <leader>tn :tabnew<CR>
+nnoremap <silent> <leader>tc :tabclose<CR>
+nnoremap <silent> <leader>[ :tabprevious<CR>
+nnoremap <silent> <leader>] :tabnext<CR>
 
 " Quick find file
 nnoremap <leader>f :find 
