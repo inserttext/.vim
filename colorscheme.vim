@@ -1,1 +1,1 @@
-colorscheme base16-material
+colorscheme base16-monokai

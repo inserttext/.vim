@@ -1,6 +1,3 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => C
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlight past column 80
 highlight OverLength guifg=#DC322F
 match OverLength /\%81v.\+/
@@ -10,3 +7,6 @@ match OverLength /\%81v.\+/
 
 " Remove tab expansion
 setlocal noexpandtab
+
+setlocal tabstop=4
+setlocal shiftwidth=4

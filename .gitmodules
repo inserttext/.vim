@@ -40,3 +40,6 @@
 [submodule "pack/plugins/start/YouCompleteMe"]
 	path = pack/plugins/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "pack/plugins/start/vim-multiple-cursors"]
+	path = pack/plugins/start/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git

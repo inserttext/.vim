@@ -73,6 +73,8 @@ set t_8b=[48;2;%lu;%lu;%lum
 let base16colorspace=256
 source ~/.vim/colorscheme.vim
 
+hi Normal guibg=NONE ctermbg=NONE
+
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -155,8 +157,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Show indent level
 " set list listchars=tab:\│\ ,
