@@ -1,7 +1,7 @@
 set -e
 
 cd ~/.vim
-mkdir temp_dirs && mkdir temp_dirs/undodir
+mkdir -p temp_dirs && mkdir -p temp_dirs/undodir
 
 git submodule update --init --recursive
 git submodule foreach git checkout master
