@@ -37,3 +37,6 @@
 [submodule "pack/plugins/start/vim-multiple-cursors"]
 	path = pack/plugins/start/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "pack/plugins/start/color_coded"]
+	path = pack/plugins/start/color_coded
+	url = https://github.com/jeaye/color_coded.git

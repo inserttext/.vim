@@ -1,3 +1,4 @@
+#/bin/bash
 set -e
 
 cd ~/.vim
@@ -7,5 +8,12 @@ git submodule update --init --recursive
 git submodule foreach git checkout master
 git submodule foreach git pull
 ./pack/plugins/start/YouCompleteMe/install.py --clang-completer --js-completer
+
+cd ~/.vim/pack/plugins/start/color_coded
+rm -f CMakeCache.txt
+mkdir build && cd build
+cmake ..
+make && make install # Compiling with GCC is preferred, ironically
+make clean && make clean_clang
 
 echo "Installed"
