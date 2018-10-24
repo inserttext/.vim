@@ -7,7 +7,7 @@ mkdir -p temp_dirs && mkdir -p temp_dirs/undodir
 git submodule update --init --recursive
 git submodule foreach git checkout master
 git submodule foreach git pull
-./pack/plugins/start/YouCompleteMe/install.py --clang-completer --js-completer
+./pack/plugins/start/YouCompleteMe/install.py --clang-completer --js-completer --java-completer
 
 cd ~/.vim/pack/plugins/start/color_coded
 rm -f CMakeCache.txt
