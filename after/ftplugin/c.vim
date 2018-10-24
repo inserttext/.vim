@@ -1,7 +1,4 @@
-" Highlight past column 80
-highlight OverLength guifg=#DC322F
-match OverLength /\%81v.\+/
-
+set colorcolumn=81
 " Set folding style to syntax
 " au FileType c set fdm=syntax
 
