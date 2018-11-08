@@ -2,7 +2,8 @@
 set -e
 
 cd ~/.vim
-mkdir -p temp_dirs && mkdir -p temp_dirs/undodir
+mkdir -p temp_dirs
+mkdir -p temp_dirs/undodir
 
 git submodule update --init --recursive
 git submodule foreach git checkout master
@@ -11,7 +12,8 @@ git submodule foreach git pull
 
 cd ~/.vim/pack/plugins/start/color_coded
 rm -f CMakeCache.txt
-mkdir build && cd build
+mkdir -p build
+cd build
 cmake ..
 make && make install # Compiling with GCC is preferred, ironically
 make clean && make clean_clang
