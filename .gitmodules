@@ -40,3 +40,6 @@
 [submodule "pack/plugins/start/color_coded"]
 	path = pack/plugins/start/color_coded
 	url = https://github.com/jeaye/color_coded.git
+[submodule "pack/plugins/start/gruvbox"]
+	path = pack/plugins/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
