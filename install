@@ -15,7 +15,7 @@ rm -f CMakeCache.txt
 mkdir -p build
 cd build
 cmake ..
-make && make install # Compiling with GCC is preferred, ironically
+make && make install
 make clean && make clean_clang
 
 echo "Installed"
