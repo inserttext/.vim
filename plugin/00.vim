@@ -156,7 +156,7 @@ set expandtab
 " Smart tabbing
 set smarttab
 
-" 1 tab == 4 spaces
+" 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 
