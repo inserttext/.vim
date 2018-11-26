@@ -66,13 +66,21 @@ set timeoutlen=500
 " Enable syntax highlighting
 syntax enable
 
-" Set colorscheme
+" Enable truecolor
 set termguicolors
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
-let base16colorspace=256
-source ~/.vim/colorscheme.vim
 
+" Enable italics
+set t_ZH=[3m
+set t_ZR=[23m
+
+" Set colorscheme
+let g:gruvbox_italic=1
+colorscheme gruvbox
+set background=dark
+
+" Remove background (for terminal transparency)
 hi Normal guibg=NONE ctermbg=NONE
 
 " Set utf8 as standard encoding and en_US as the standard language

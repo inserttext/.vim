@@ -1,1 +1,2 @@
-colorscheme base16-monokai
+colorscheme gruvbox
+set background=dark
