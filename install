@@ -10,12 +10,4 @@ git submodule foreach git checkout master
 git submodule foreach git pull
 ./pack/plugins/start/YouCompleteMe/install.py --clang-completer --js-completer --java-completer
 
-cd ~/.vim/pack/plugins/start/color_coded
-rm -f CMakeCache.txt
-mkdir -p build
-cd build
-cmake ..
-make && make install
-make clean && make clean_clang
-
 echo "Installed"
