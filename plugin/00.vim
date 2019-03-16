@@ -59,6 +59,9 @@ set novisualbell
 set t_vb=
 set timeoutlen=500
 
+" Show cursor line
+set cursorline
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
