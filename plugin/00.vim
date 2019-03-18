@@ -28,6 +28,8 @@ let g:mapleader = " "
 " Set time for swap updates
 set updatetime=250
 
+" Set tex type to latex
+let g:tex_flavor = 'latex'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM User Interface
