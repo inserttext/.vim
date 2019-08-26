@@ -40,3 +40,6 @@
 [submodule "pack/plugins/start/vimtex"]
 	path = pack/plugins/start/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "pack/plugins/start/vim-latex"]
+	path = pack/plugins/start/vim-latex
+	url = https://github.com/vim-latex/vim-latex.git
