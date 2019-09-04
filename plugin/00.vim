@@ -163,18 +163,15 @@ set path+=**
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, Tab, and Indent
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Expand tabs to spaces
-set expandtab
+" Tabs are tabs
+set noexpandtab
 
 " Smart tabbing
 set smarttab
 
-" 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2
-
-" Show indent level
-" set list listchars=tab:\│\ ,
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
 
 set autoindent "Auto indent
 set smartindent "Smart indent
