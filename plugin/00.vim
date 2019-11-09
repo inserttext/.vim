@@ -110,6 +110,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Save with <leader><leader>
+nmap <silent> <leader><leader> :update<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => File Browsing
