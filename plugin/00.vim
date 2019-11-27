@@ -9,14 +9,7 @@
 " vim-tmux-navigator
 let g:tmux_navigator_disable_when_zoomed = 1
 
-" ale
-let g:ale_lint_on_text_changed = 'always'
-let g:ale_echo_msg_format = '[%linter%] %s'
-let g:ale_c_parse_compile_commands = 1
-let g:ale_cpp_parse_compile_commands = 1
-
 " vimtex
-" Set tex type to latex
 let g:tex_flavor = 'latex'
 let g:vimtex_view_forward_search_on_start = 0
 let g:vimtex_view_method = 'zathura'
@@ -25,7 +18,7 @@ let g:vimtex_view_method = 'zathura'
 let g:gruvbox_italic=1
 
 " airline
-let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#coc#enabled = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
