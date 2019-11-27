@@ -5,9 +5,4 @@ cd ~/.vim
 mkdir -p temp_dirs
 mkdir -p temp_dirs/undodir
 
-git submodule update --init --recursive
-git submodule foreach git checkout master
-git submodule foreach git pull
-./pack/plugins/start/YouCompleteMe/install.py --clangd-completer --js-completer
-
 echo "Installed"
