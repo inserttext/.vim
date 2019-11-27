@@ -209,8 +209,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Better tab management
-nnoremap <silent> <leader>tn :tabnew<CR>
-nnoremap <silent> <leader>tc :tabclose<CR>
+nnoremap <silent> <leader>tc :tabnew<CR>
+nnoremap <silent> <leader>tx :tabclose<CR>
 nnoremap <silent> <leader>[ :tabprevious<CR>
 nnoremap <silent> <leader>] :tabnext<CR>
 
