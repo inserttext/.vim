@@ -5,4 +5,6 @@ cd ~/.vim
 mkdir -p temp_dirs
 mkdir -p temp_dirs/undodir
 
+vim +PlugInstall +qall
+
 echo "Installed"
