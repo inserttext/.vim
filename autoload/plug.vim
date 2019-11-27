@@ -287,7 +287,7 @@ function! plug#end()
   " filetype plugin indent on
   " if has('vim_starting')
   "   if has('syntax') && !exists('g:syntax_on')
-  "     syntax enable
+      syntax enable
   "   end
   " else
     call s:reload_plugins()
