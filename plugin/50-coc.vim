@@ -4,14 +4,14 @@ set shortmess+=c
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+			\ pumvisible() ? "\<C-n>" :
+			\ <SID>check_back_space() ? "\<TAB>" :
+			\ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1] =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
@@ -36,14 +36,13 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+xmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>ac <Plug>(coc-codeaction)
 " Fix autofix problem of current line
-nmap <leader>qf  <Plug>(coc-fix-current)
-
+nmap <leader>qf <Plug>(coc-fix-current)
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
@@ -60,8 +59,30 @@ command! -nargs=0 Format :call CocAction('format')
 " Use `:Fold` to fold current buffer
 command! -nargs=? Fold :call CocAction('fold', <f-args>)
 
-" use `:OR` for organize import of current buffer
-command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImport')
+" Use `:OR` for organize import of current buffer
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
 
-" Add status line support, for integration with other plugin, checkout `:h coc-status`
-" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" Highlight groups
+hi! CocUnderline cterm=underline gui=underline
+hi! default link CocCodeLens GruvBoxGrey
+hi! default link CocErrorSign GruvBoxRedSign
+hi! default link CocWarningSign GruvBoxYellowSign
+hi! default link CocInfoSign GruvBoxGreenSign
+hi! default link CocHintSign GruvBoxBlueSign
+hi! default link CocErrorVirtualText GruvBoxRed
+hi! default link CocWarningVirtualText GruvBoxYellow
+hi! default link CocInfoVirtualText GruvBoxGreen
+hi! default link CocHintVirtualText GruvBoxBlue
+hi! default link CocErrorHighlight CocUnderline
+hi! default link CocWarningHighlight CocUnderline
+hi! default link CocInfoHighlight CocUnderline
+hi! default link CocHintHighlight CocUnderline
+hi! default link CocHighlightText CursorColumn
+hi! default link CocHighlightRead CocHighlightText
+hi! default link CocHighlightWrite CocHighlightText
+hi! default link CocErrorFloat CocErrorSign
+hi! default link CocWarningFloat CocWarningSign
+hi! default link CocInfoFloat CocInfoSign
+hi! default link CocHintFloat CocHintSign
+hi! default link CocCursorRange Search
+hi! default link CocHoverRange Search
