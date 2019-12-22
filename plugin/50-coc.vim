@@ -1,5 +1,5 @@
 " don't give |ins-completion-menu| messages.
-set shortmess+=c
+" set shortmess+=c
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
