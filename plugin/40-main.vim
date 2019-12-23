@@ -175,10 +175,10 @@ inoremap $4 {<esc>o}<esc>O
 map <silent> <leader><cr> :noh<CR>
 
 " Better window switching
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+" map <C-j> <C-W>j
+" map <C-k> <C-W>k
+" map <C-h> <C-W>h
+" map <C-l> <C-W>l
 
 " Better tab management
 nnoremap <silent> <leader>tc :tabnew<CR>
