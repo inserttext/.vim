@@ -1,9 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Before
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remove system settings
-set nocompatible
-
 " Map leader for extra functions
 let mapleader = " "
 let g:mapleader = " "
