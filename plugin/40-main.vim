@@ -45,6 +45,9 @@ set timeoutlen=500
 " Show cursor line
 set cursorline
 
+" Show 81st column
+set colorcolumn=81
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
