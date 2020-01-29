@@ -21,4 +21,5 @@ Plug 'https://github.com/tpope/vim-repeat.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/vim-airline/vim-airline-themes.git'
 Plug 'https://github.com/CaffeineViking/vim-glsl.git'
+Plug 'https://github.com/iamcco/markdown-preview.nvim.git', { 'do': 'cd app & yarn install'  }
 call plug#end()

@@ -1,6 +1,3 @@
-" don't give |ins-completion-menu| messages.
-" set shortmess+=c
-
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -41,8 +38,10 @@ nmap <leader>a <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
 nmap <leader>ac <Plug>(coc-codeaction)
+
 " Fix autofix problem of current line
 nmap <leader>qf <Plug>(coc-fix-current)
+
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
