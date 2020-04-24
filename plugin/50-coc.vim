@@ -63,6 +63,7 @@ command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport
 
 " Highlight groups
 hi! CocUnderline cterm=underline gui=underline
+hi! default clear None
 hi! default link CocCodeLens GruvBoxGrey
 hi! default link CocErrorSign GruvBoxRedSign
 hi! default link CocWarningSign GruvBoxYellowSign

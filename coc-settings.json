@@ -1,4 +1,10 @@
 {
+		"clangd": {
+			"enabled": true,
+			"path": "clangd",
+			"arguments": "",
+			"semanticHighlighting": true
+		},
 		"http": {
 			"proxy": "",
 			"proxyStrictSSL": true
@@ -151,24 +157,6 @@
 			}
 		},
 	"languageserver": {
-		"clangd": {
-			"command": "clangd",
-			"args": [
-				"--background-index"
-			],
-			"rootPatterns": [
-				"compile_flags.txt",
-				"compile_commands.json",
-				".git/",
-				".hg/"
-			],
-			"filetypes": [
-				"c",
-				"cpp",
-				"objc",
-				"objcpp"
-			]
-		},
 		"haskell": {
 			"command": "hie-wrapper",
 			"rootPatterns": [
