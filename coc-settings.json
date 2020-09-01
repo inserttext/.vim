@@ -1,167 +1,169 @@
 {
-		"clangd": {
-			"enabled": true,
-			"path": "clangd",
-			"arguments": "",
-			"semanticHighlighting": true
+	"clangd": {
+		"enabled": true,
+		"path": "clangd",
+		"arguments": "",
+		"semanticHighlighting": true
+	},
+	"http": {
+		"proxy": "",
+		"proxyStrictSSL": true
+	},
+	"npm": {
+		"binPath": "npm"
+	},
+	"suggest": {
+		"enablePreselect": true,
+		"maxPreviewWidth": 80,
+		"enablePreview": false,
+		"floatEnable": true,
+		"labelMaxLength": 200,
+		"detailMaxLength": 100,
+		"detailField": "menu",
+		"autoTrigger": "always",
+		"languageSourcePriority": 99,
+		"numberSelect": false,
+		"disableKind": false,
+		"disableMenu": false,
+		"disableMenuShortcut": false,
+		"snippetIndicator": "~",
+		"maxCompleteItemCount": 50,
+		"preferCompleteThanJumpPlaceholder": false,
+		"fixInsertedWord": true,
+		"localityBonus": true,
+		"triggerAfterInsertEnter": false,
+		"timeout": 5000,
+		"minTriggerInputLength": 1,
+		"triggerCompletionWait": 60,
+		"echodocSupport": false,
+		"acceptSuggestionOnCommitCharacter": false,
+		"noselect": true,
+		"keepCompleteopt": false,
+		"lowPrioritySourceLimit": false,
+		"defaultSortMethod": "length",
+		"invalidInsertCharacters": [" ", "(", "<", "{", "[", "\r", "\n"]
+	},
+	"diagnostic": {
+		"enable": true,
+		"level": "hint",
+		"checkCurrentLine": true,
+		"messageTarget": "float",
+		"messageDelay": 250,
+		"joinMessageLines": false,
+		"refreshOnInsertMode": true,
+		"refreshAfterSave": false,
+		"displayByAle": false,
+		"virtualText": false,
+		"virtualTextPrefix": "",
+		"virtualTextLines": 3,
+		"virtualTextLineSeparator": " \\ ",
+		"enableSign": true,
+		"enableMessage": "always",
+		"locationlist": true,
+		"highlightOffset": 1000,
+		"signOffset": 1000,
+		"errorSign": ">>",
+		"warningSign": "⚠",
+		"infoSign": ">>",
+		"hintSign": ">>",
+		"maxWindowHeight": 8,
+		"maxWindowWidth": 80,
+		"filetypeMap": {}
+	},
+	"signature": {
+		"enable": true,
+		"triggerSignatureWait": 50,
+		"target": 60,
+		"preferShownAbove": true,
+		"hideOnTextChange": false,
+		"maxWindowHeight": 8
+	},
+	"codeLens": {
+		"enable": false,
+		"separator": "‣"
+	},
+	"refactor": {
+		"openCommand": "vsplit",
+		"beforeContext": 3,
+		"afterContext": 3
+	},
+	"workspace": {
+		"ignoredFiletypes": ["markdown", "log", "txt", "help"]
+	},
+	"list": {
+		"indicator": ">",
+		"interactiveDebounceTime": 100,
+		"maxHeight": 10,
+		"signOffset": 900,
+		"selectedSignText": "*",
+		"extendedSearchMode": true,
+		"autoResize": true,
+		"limitLines": 30000,
+		"maxPreviewHeight": 12,
+		"previewSplitRight": false,
+		"previewHighlightGroup": "Search",
+		"nextKeymap": "<C-j>",
+		"previousKeymap": "<C-k>"
+	},
+	"cursors": {
+		"cancelKey": "<esc>",
+		"nextKey": "<C-n>",
+		"previousKey": "<C-p>"
+	},
+	"coc": {
+		"preferences": {
+			"useQuickfixForLocations": false,
+			"extensionUpdateCheck": "daily",
+			"snippetStatusText": "SNIP",
+			"hoverTarget": true,
+			"previewAutoClose": true,
+			"currentFunctionSymbolAutoUpdate": false,
+			"formatOnSaveFiletypes": [],
+			"enableFloatHighlight": true,
+			"rootPatterns": [".vim", ".git", ".hg", ".projections.json"],
+			"watchmanPath": null,
+			"jumpCommand": "edit",
+			"messageLevel": "more",
+			"bracketEnterImprove": true,
+			"formatOnType": false,
+			"snippets.enable": true
 		},
-		"http": {
-			"proxy": "",
-			"proxyStrictSSL": true
-		},
-		"npm": {
-			"binPath": "npm"
-		},
-		"suggest": {
-			"enablePreselect": true,
-			"maxPreviewWidth": 80,
-			"enablePreview": false,
-			"floatEnable": true,
-			"labelMaxLength": 200,
-			"detailMaxLength": 100,
-			"detailField": "menu",
-			"autoTrigger": "always",
-			"languageSourcePriority": 99,
-			"numberSelect": false,
-			"disableKind": false,
-			"disableMenu": false,
-			"disableMenuShortcut": false,
-			"snippetIndicator": "~",
-			"maxCompleteItemCount": 50,
-			"preferCompleteThanJumpPlaceholder": false,
-			"fixInsertedWord": true,
-			"localityBonus": true,
-			"triggerAfterInsertEnter": false,
-			"timeout": 5000,
-			"minTriggerInputLength": 1,
-			"triggerCompletionWait": 60,
-			"echodocSupport": false,
-			"acceptSuggestionOnCommitCharacter": false,
-			"noselect": true,
-			"keepCompleteopt": false,
-			"lowPrioritySourceLimit": false,
-			"defaultSortMethod": "length",
-			"invalidInsertCharacters": [" ", "(", "<", "{", "[", "\r", "\n"]
-		},
-		"diagnostic": {
-			"enable": true,
-			"level": "hint",
-			"checkCurrentLine": true,
-			"messageTarget": "float",
-			"messageDelay": 250,
-			"joinMessageLines": false,
-			"refreshOnInsertMode": true,
-			"refreshAfterSave": false,
-			"displayByAle": false,
-			"virtualText": false,
-			"virtualTextPrefix": "",
-			"virtualTextLines": 3,
-			"virtualTextLineSeparator": " \\ ",
-			"enableSign": true,
-			"enableMessage": "always",
-			"locationlist": true,
-			"highlightOffset": 1000,
-			"signOffset": 1000,
-			"errorSign": ">>",
-			"warningSign": "⚠",
-			"infoSign": ">>",
-			"hintSign": ">>",
-			"maxWindowHeight": 8,
-			"maxWindowWidth": 80,
-			"filetypeMap": {}
-		},
-		"signature": {
-			"enable": true,
-			"triggerSignatureWait": 50,
-			"target": 60,
-			"preferShownAbove": true,
-			"hideOnTextChange": false,
-			"maxWindowHeight": 8
-		},
-		"codeLens": {
-			"enable": true,
-			"separator": "‣"
-		},
-		"refactor": {
-			"openCommand": "vsplit",
-			"beforeContext": 3,
-			"afterContext": 3
-		},
-		"workspace": {
-			"ignoredFiletypes": ["markdown", "log", "txt", "help"]
-		},
-		"list": {
-			"indicator": ">",
-			"interactiveDebounceTime": 100,
-			"maxHeight": 10,
-			"signOffset": 900,
-			"selectedSignText": "*",
-			"extendedSearchMode": true,
-			"autoResize": true,
-			"limitLines": 30000,
-			"maxPreviewHeight": 12,
-			"previewSplitRight": false,
-			"previewHighlightGroup": "Search",
-			"nextKeymap": "<C-j>",
-			"previousKeymap": "<C-k>"
-		},
-		"cursors": {
-			"cancelKey": "<esc>",
-			"nextKey": "<C-n>",
-			"previousKey": "<C-p>"
-		},
-		"coc": {
-			"preferences": {
-				"useQuickfixForLocations": false,
-				"extensionUpdateCheck": "daily",
-				"snippetStatusText": "SNIP",
-				"hoverTarget": true,
-				"previewAutoClose": true,
-				"currentFunctionSymbolAutoUpdate": false,
-				"formatOnSaveFiletypes": [],
-				"enableFloatHighlight": true,
-				"rootPatterns": [".vim", ".git", ".hg", ".projections.json"],
-				"watchmanPath": null,
-				"jumpCommand": "edit",
-				"messageLevel": "more",
-				"bracketEnterImprove": true,
-				"formatOnType": false,
-				"snippets.enable": true
+		"source": {
+			"around": {
+				"enable": true,
+				"firstMatch": true,
+				"shortcut": "A",
+				"priority": 1,
+				"disableSyntaxes": []
 			},
-			"source": {
-				"around": {
-					"enable": true,
-					"firstMatch": true,
-					"shortcut": "A",
-					"priority": 1,
-					"disableSyntaxes": []
-				},
-				"buffer": {
-					"enable": true,
-					"shortcut": "B",
-					"priority": 1,
-					"firstMatch": true,
-					"ignoreGitignore": true,
-					"disableSyntaxes": []
-				},
-				"file": {
-					"enable": true,
-					"shortcut": "F",
-					"priority": 10,
-					"disableSyntaxes": [],
-					"triggerCharacters": ["/"],
-					"trimSameExts": [".ts", ".js"],
-					"ignoreHidden": true,
-					"ignorePatterns": []
-				}
+			"buffer": {
+				"enable": true,
+				"shortcut": "B",
+				"priority": 1,
+				"firstMatch": true,
+				"ignoreGitignore": true,
+				"disableSyntaxes": []
+			},
+			"file": {
+				"enable": true,
+				"shortcut": "F",
+				"priority": 10,
+				"disableSyntaxes": [],
+				"triggerCharacters": ["/"],
+				"trimSameExts": [".ts", ".js"],
+				"ignoreHidden": true,
+				"ignorePatterns": []
 			}
-		},
+		}
+	},
 	"languageserver": {
 		"haskell": {
-			"command": "hie-wrapper",
+			"command": "haskell-language-server-wrapper",
+			"args": ["--lsp"],
 			"rootPatterns": [
+				"*.cabal",
 				"stack.yaml",
-				"cabal.config",
+				"cabal.project",
 				"package.yaml"
 			],
 			"filetypes": [
@@ -171,9 +173,11 @@
 			],
 			"initializationOptions": {
 				"languageServerHaskell": {
-					"hlintOn": true
 				}
 			}
 		}
+	},
+	"python": {
+		"venvFolders": [".local/share/virtualenvs"]
 	}
 }

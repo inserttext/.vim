@@ -23,5 +23,6 @@ Plug 'https://github.com/vim-airline/vim-airline-themes.git'
 Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'https://github.com/jpalardy/vim-slime', { 'for': 'python' }
 Plug 'https://github.com/hanschen/vim-ipython-cell', { 'for': 'python' }
-" Plug 'https://github.com/jackguo380/vim-lsp-cxx-highlight'
+Plug 'https://github.com/Glench/Vim-Jinja2-Syntax.git'
+Plug 'https://github.com/jackguo380/vim-lsp-cxx-highlight.git'
 call plug#end()

@@ -76,6 +76,9 @@ set encoding=utf8
 " Use Unix as the standard file type
 set fileformats=unix,dos,mac
 
+" Default nasm for assembly
+let asmsyntax = "nasm"
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, Backups, and Undo
@@ -187,9 +190,6 @@ nnoremap <silent> <leader>tc :tabnew<CR>
 nnoremap <silent> <leader>tx :tabclose<CR>
 nnoremap <silent> <leader>[ :tabprevious<CR>
 nnoremap <silent> <leader>] :tabnext<CR>
-
-" Quick find file
-nnoremap <leader>f :find
 
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

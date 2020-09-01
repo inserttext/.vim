@@ -8,7 +8,7 @@ nnoremap <Leader>r :IPythonCellRun<CR>
 nnoremap <Leader>R :IPythonCellRunTime<CR>
 
 " map <Leader>c to execute the current cell
-nnoremap <Leader>c :IPythonCellExecuteCell<CR>
+nnoremap <Leader>c :IPythonCellExecuteCellVerbose<CR>
 
 " map <Leader>C to execute the current cell and jump to the next cell
 nnoremap <Leader>C :IPythonCellExecuteCellJump<CR>
