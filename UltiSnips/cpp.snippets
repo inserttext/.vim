@@ -5,21 +5,23 @@ priority -49
 
 # Python Stuff
 global !p
-def write_docstring_args(arglist, snip):
+def docstring_args(arglist, snip):
 	args = str(arglist).split(',')
+	ret = ""
 	if len(args) > 1:
 		c = 0
 		for arg in args:
 			if c == 0:
-				snip.rv += arg
+				ret += arg
 				c = 1
 			else:
-				snip += '//     %s' % arg.strip()
+				ret += '\n//     %s' % arg.strip()
 	else:
-		snip.rv = args[0]
+		ret = args[0]
+	return ret
 
 def get_filename(snip):
-	args = str(snip.fn).split('.')
+	return str(snip.fn).split('.')[0]
 endglobal
 
 # Snippets
@@ -31,7 +33,7 @@ snippet fun "Function Header" b
 //     ${4}
 //
 // Parameters:
-//     `!p write_docstring_args(t[3], snip)`
+//     `!p snip.rv = docstring_args(t[3], snip)`
 //
 // Return:
 //     `!p snip.rv = t[1]`
@@ -51,7 +53,7 @@ snippet meth "Method Header" b
 //     ${4}
 //
 // Parameters:
-//     `!p write_docstring_args(t[3], snip)`
+//     `!p snip.rv = docstring_args(t[3], snip)`
 //
 // Return:
 //     `!p snip.rv = t[1]`
@@ -71,7 +73,7 @@ snippet defcon "Default Constructor Header" b
 //     Default constuctor for $1
 //
 // Parameters:
-//     `!p write_docstring_args(t[2], snip)`
+//     `!p snip.rv = docstring_args(t[2], snip)`
 //-----------------------------------------------------------------------------
 
 $1::$1(${2:void})
