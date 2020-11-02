@@ -26,4 +26,6 @@ Plug 'https://github.com/hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'https://github.com/Glench/Vim-Jinja2-Syntax.git'
 Plug 'https://github.com/jackguo380/vim-lsp-cxx-highlight.git'
 Plug 'https://github.com/krisajenkins/vim-projectlocal.git'
+Plug 'https://github.com/reconquest/vim-pythonx.git'
+Plug 'https://github.com/SirVer/ultisnips.git'
 call plug#end()

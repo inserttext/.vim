@@ -77,7 +77,7 @@ set encoding=utf8
 set fileformats=unix,dos,mac
 
 " Default nasm for assembly
-let asmsyntax = "nasm"
+let asmsyntax = "asm"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

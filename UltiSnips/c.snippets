@@ -1,0 +1,11 @@
+priority -50
+
+snippet guard "Header Guard"
+#ifndef ${1:`!p snip.rv = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()`}
+#define $1
+
+${0:${VISUAL}}
+
+#endif
+endsnippet
+
